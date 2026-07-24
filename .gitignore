@@ -1,0 +1,17 @@
+# Secrets — the Discord webhook URL is a credential, never commit it
+.env
+.env.*
+*.webhook
+discord/*.local.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Build / tooling artefacts
+node_modules/
+lychee-report.md
+.lycheecache

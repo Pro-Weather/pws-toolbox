@@ -1,0 +1,53 @@
+name: Link Check
+
+on:
+  schedule:
+    # Weekly, Monday 06:00 UTC
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "**/*.md"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --max-concurrency 8
+            --timeout 25
+            --retry-wait-time 5
+            --max-retries 2
+            --accept 200,203,206,301,302,303,307,308,429
+            --exclude-mail
+            './**/*.md'
+          fail: false
+          output: lychee-report.md
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lychee-report
+          path: lychee-report.md
+
+      # Only nag on the scheduled run — PRs get the report in the artifact,
+      # so a single flaky third-party host doesn't block a contribution.
+      - name: Open an issue if links are broken
+        if: env.lychee_exit_code != '0' && github.event_name == 'schedule'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "🔗 Weekly link check found broken links"
+          content-filepath: lychee-report.md
+          labels: broken-link, automated

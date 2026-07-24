@@ -1,0 +1,91 @@
+name: 🧰 Add a tool
+description: Suggest a tool, template, API, service or project to add to the list
+title: "[add] "
+labels: ["addition"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! One tool per issue keeps things easy to track.
+        Prefer to send a PR? Edit the relevant file in [`docs/`](../../tree/main/docs) — see [CONTRIBUTING.md](../../blob/main/CONTRIBUTING.md).
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: WeeWX
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Link
+      description: The project's own site or repository — not a review, shop listing or affiliate link.
+      placeholder: https://weewx.com/
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Hardware (stations, gateways, sensors)
+        - Station software (collection, logging, upload)
+        - Website template or skin
+        - Charts, gauges, maps, widgets
+        - Database or storage
+        - Weather data API (forecast, radar, satellite, air quality)
+        - Network to upload to
+        - Hosting or deployment
+        - DIY (microcontrollers, firmware, 3D prints)
+        - Extras (cameras, alerts, bots, astronomy)
+        - Community (forum, Discord, docs, book)
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: One line — what makes it different?
+      description: Not what category it's in; what it does that alternatives don't.
+      placeholder: The only WeeWX skin with real-time MQTT streaming and configurable Highcharts graphs.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cost
+    attributes:
+      label: Cost / licence
+      options:
+        - Free and open source
+        - Free (closed source)
+        - Free tier available
+        - Paid
+        - Hardware purchase
+        - Unknown
+    validations:
+      required: true
+
+  - type: input
+    id: platform
+    attributes:
+      label: Platform / requirements
+      description: Only if restricted — e.g. macOS only, needs PHP hosting, Windows only.
+      placeholder: Linux, macOS, BSD (Python 3.9+)
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: It's relevant to building or running a personal weather station website
+          required: true
+        - label: It works today and the link is live
+          required: true
+        - label: It isn't already in the list (I searched)
+          required: true
+        - label: This is my own project (fine — just say so)
+          required: false

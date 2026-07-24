@@ -1,0 +1,44 @@
+name: 🔗 Broken or outdated entry
+description: A link is dead, a project moved, or an entry is no longer accurate
+title: "[fix] "
+labels: ["broken-link"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keeping entries *currently true* is half the value of this list. Thanks for flagging.
+
+  - type: input
+    id: entry
+    attributes:
+      label: Which entry?
+      placeholder: "docs/website-templates.md — Meteotemplate"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What's wrong?
+      options:
+        - Link is dead (404 / domain gone)
+        - Project moved to a new URL
+        - Project is abandoned / no longer works
+        - A maintained fork has taken over
+        - Description is inaccurate or out of date
+        - Licence or pricing changed
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: replacement
+    attributes:
+      label: Replacement link, if you know one
+      placeholder: https://github.com/someone/the-active-fork
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      placeholder: The original repo hasn't had a commit since 2021; the fork at … is where development moved.

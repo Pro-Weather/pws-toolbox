@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="45%" stop-color="#122a45"/>
+      <stop offset="100%" stop-color="#1b4a6e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a3e635"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#sky)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#ffffff" stroke-opacity="0.045" stroke-width="1">
+    <path d="M0 80H1280M0 160H1280M0 240H1280M0 320H1280M0 400H1280M0 480H1280M0 560H1280"/>
+    <path d="M80 0V640M160 0V640M240 0V640M320 0V640M400 0V640M480 0V640M560 0V640M640 0V640M720 0V640M800 0V640M880 0V640M960 0V640M1040 0V640M1120 0V640M1200 0V640"/>
+  </g>
+
+  <!-- temperature trace -->
+  <path d="M0 470 C 90 455, 130 505, 210 495 S 330 415, 410 430 S 530 500, 610 470 S 730 380, 810 400 S 930 465, 1010 430 S 1150 355, 1280 385 L1280 640 L0 640 Z" fill="url(#fade)"/>
+  <path d="M0 470 C 90 455, 130 505, 210 495 S 330 415, 410 430 S 530 500, 610 470 S 730 380, 810 400 S 930 465, 1010 430 S 1150 355, 1280 385"
+        fill="none" stroke="url(#accent)" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- accent bar -->
+  <rect x="80" y="150" width="88" height="7" rx="3.5" fill="url(#accent)"/>
+
+  <!-- title -->
+  <text x="80" y="248" fill="#f8fafc" font-size="76" font-weight="700" letter-spacing="-1.5">Awesome Personal</text>
+  <text x="80" y="330" fill="#f8fafc" font-size="76" font-weight="700" letter-spacing="-1.5">Weather Station</text>
+
+  <text x="80" y="392" fill="#93c5fd" font-size="27" font-weight="500">
+    Every tool for turning a station in your garden into a website.
+  </text>
+
+  <!-- chips -->
+  <g font-size="19" font-weight="600">
+    <rect x="80"  y="424" width="152" height="42" rx="21" fill="#ffffff" fill-opacity="0.09" stroke="#ffffff" stroke-opacity="0.16"/>
+    <text x="156" y="451" fill="#e2e8f0" text-anchor="middle">Hardware</text>
+
+    <rect x="244" y="424" width="152" height="42" rx="21" fill="#ffffff" fill-opacity="0.09" stroke="#ffffff" stroke-opacity="0.16"/>
+    <text x="320" y="451" fill="#e2e8f0" text-anchor="middle">Software</text>
+
+    <rect x="408" y="424" width="152" height="42" rx="21" fill="#ffffff" fill-opacity="0.09" stroke="#ffffff" stroke-opacity="0.16"/>
+    <text x="484" y="451" fill="#e2e8f0" text-anchor="middle">Templates</text>
+
+    <rect x="572" y="424" width="128" height="42" rx="21" fill="#ffffff" fill-opacity="0.09" stroke="#ffffff" stroke-opacity="0.16"/>
+    <text x="636" y="451" fill="#e2e8f0" text-anchor="middle">APIs</text>
+
+    <rect x="712" y="424" width="152" height="42" rx="21" fill="#ffffff" fill-opacity="0.09" stroke="#ffffff" stroke-opacity="0.16"/>
+    <text x="788" y="451" fill="#e2e8f0" text-anchor="middle">Hosting</text>
+  </g>
+
+  <!-- footer -->
+  <text x="80" y="556" fill="#64748b" font-size="22" font-weight="600" letter-spacing="1.5">GITHUB.COM/PRO-WEATHER</text>
+
+  <!-- sun / cloud mark -->
+  <g transform="translate(1010,150)">
+    <circle cx="60" cy="60" r="46" fill="#fbbf24" opacity="0.95"/>
+    <g stroke="#fbbf24" stroke-width="6" stroke-linecap="round" opacity="0.65">
+      <path d="M60 -4V-24M60 144V124M-4 60H-24M144 60H124M15 15L1 1M105 105L119 119M105 15L119 1M15 105L1 119"/>
+    </g>
+    <path d="M40 118a30 30 0 0 1 30-30 34 34 0 0 1 33 27 24 24 0 0 1-5 47H44a22 22 0 0 1-4-44z"
+          fill="#e2e8f0" opacity="0.97"/>
+    <g stroke="#38bdf8" stroke-width="6" stroke-linecap="round" opacity="0.9">
+      <path d="M52 176l-8 22M78 176l-8 22M104 176l-8 22"/>
+    </g>
+  </g>
+</svg>

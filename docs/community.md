@@ -102,6 +102,7 @@ Discord is where the newer/DIY end of the hobby has moved.
 - **[rtl_433 device list](https://github.com/merbanan/rtl_433/blob/master/docs/SUPPORTED_PROTOCOLS.md)** — check before buying a cheap sensor
 - **[ESPHome docs](https://esphome.io/)** — sensor component reference
 - **[Open-Meteo docs](https://open-meteo.com/en/docs)** — clear, example-driven
+- **[Pro Weather docs & blog](https://pro-weather.com/docs)** — Davis/WeatherLink setup, API-key steps, and publishing to the community networks. Written by [Pro-Weather](https://github.com/Pro-Weather), who maintain this list; useful for the WeatherLink specifics whether or not you use [the product](website-templates.md#pro-weather).
 - **[MetPy docs](https://unidata.github.io/MetPy/)** — meteorological calculations, correctly
 - **[Wikipedia: Weather station](https://en.wikipedia.org/wiki/Weather_station)** — better than you'd expect as an orientation
 

@@ -31,9 +31,15 @@ getting that onto the internet without opening port 80 to the world.
 | **C. Serve directly from home** | Medium | €0 | You have a static IP and are comfortable with the security work |
 | **D. VPS** | Medium | €4/mo | You want a normal server you fully control |
 | **E. Vendor cloud only** | None | €0 | You just want a link to share — use [network pages](networks.md) |
+| **F. Fully hosted service** | None | ~€6/mo | You want a real site on your own domain and no infrastructure at all — see [hosted services](website-templates.md#hosted-services-no-server) |
 
 **Most people should do A + B:** static site on Cloudflare Pages for the public, tunnel for the
 admin UI and live MQTT feed.
+
+**If you'd rather skip this whole page:** a hosted service like
+[Pro Weather](website-templates.md#pro-weather) (Davis/WeatherLink, ~€6/mo) does hosting, TLS,
+custom domain, archiving and refresh for you. Everything below is what you take on by *not* doing
+that — which is a perfectly good trade if you enjoy it.
 
 ---
 

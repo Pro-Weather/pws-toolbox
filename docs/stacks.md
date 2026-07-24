@@ -1,6 +1,6 @@
 # 🧱 Ready-made stacks
 
-Five complete, working builds. Pick the one that matches your budget and patience, then use the
+Six complete, working builds. Pick the one that matches your budget and patience, then use the
 other pages for detail. Every one of these is a real configuration people run today.
 
 [← Back to index](../README.md)
@@ -14,6 +14,7 @@ other pages for detail. Every one of these is a real configuration people run to
 | [3](#stack-3-zero-maintenance) | **Tempest + cloud only** | ~€400 | ⭐ | You want it to just work forever |
 | [4](#stack-4-the-davis-classic) | **Davis + CumulusMX + PWS Dashboard** | ~€800 | ⭐⭐⭐ | Data quality, 20-year horizon |
 | [5](#stack-5-full-diy) | **ESP32 + MQTT + Astro** | ~€80 | ⭐⭐⭐⭐ | You want to build every part |
+| [6](#stack-6-hosted-no-server) | **Davis + a hosted service** | hardware + ~€6/mo | ⭐ | A real site on your domain with zero infrastructure |
 
 ---
 
@@ -206,15 +207,53 @@ buy the wind and rain sensors** (Fine Offset spares are ~€25–40 and are alre
 
 ---
 
+## Stack 6: Hosted, no server
+
+**You own the station and the domain; someone else runs everything in between.** The right answer
+surprisingly often — particularly if the alternative is a Raspberry Pi you'll stop maintaining in
+eighteen months.
+
+```
+Davis station ──▶ WeatherLink cloud ──(v2 API key)──▶ hosted service
+                                                        ├──▶ permanent archive
+                                                        ├──▶ site on your own domain + SSL
+                                                        └──▶ Wunderground · CWOP · WOW · Windy
+```
+
+**Cost:** your hardware, plus a subscription. No server, no OS updates, no backups, no TLS renewals.
+
+**[Pro Weather](website-templates.md#pro-weather)** — €5.99/mo or €59/yr per site, 14-day free trial.
+Paste a WeatherLink v2 key, it discovers your sensors and deploys the site. Permanent history
+archive (so you get multi-year charts and all-time records that WeatherLink alone won't give you),
+7-day forecast, records and almanac, custom domain with automatic SSL, EN/NL/FR/DE.
+[Live example](https://weerstationardooie.be).
+Ecowitt gateways and WeeWX/Meteobridge/CumulusMX can feed it too, via a per-site upload URL.
+
+> ℹ️ Built by [Pro-Weather](https://github.com/Pro-Weather), who maintain this list.
+
+**Steps:** 1. get your [WeatherLink v2 API key](https://www.weatherlink.com/) · 2. paste it ·
+3. pick units, language, theme and which tabs appear · 4. point your domain at it. That's the build.
+
+**Trade-offs, honestly:** you don't own the stack, you can't hand-edit the HTML, and you're paying
+monthly for something [WeeWX and a free skin](website-templates.md#weewx-skins) do for €0 — if you'll
+actually maintain them. You also stay dependent on Davis's cloud being up, since the data path runs
+through WeatherLink rather than your LAN. If you want local-first, use
+[Stack 2](#stack-2-the-modern-default) or [4](#stack-4-the-davis-classic) instead; nothing stops you
+running both, and a hosted public site plus a local archive is a genuinely sensible belt-and-braces
+setup.
+
+---
+
 ## Choosing between them
 
 | If you care most about… | Go with |
 |---|---|
 | Getting something online this weekend | [1](#stack-1-no-hardware) then [2](#stack-2-the-modern-default) |
 | Value for money | [2](#stack-2-the-modern-default) |
-| Never touching it again | [3](#stack-3-zero-maintenance) |
+| Never touching it again | [3](#stack-3-zero-maintenance) or [6](#stack-6-hosted-no-server) |
 | Data accuracy and longevity | [4](#stack-4-the-davis-classic) |
 | Learning / the process itself | [5](#stack-5-full-diy) |
+| Owning a Davis station but not a server | [6](#stack-6-hosted-no-server) |
 | A site that looks better than everyone else's | Any stack + [charts-widgets.md](charts-widgets.md) + [design guidance](charts-widgets.md#design-guidance) |
 
 **Three things that apply to every stack:**

@@ -114,6 +114,7 @@ irreplaceable observations, gone.
 - **[sqlite3 .backup / VACUUM INTO](https://www.sqlite.org/lang_vacuum.html)** — safe hot copies
 - **[mysqldump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)** / **[mariabackup](https://mariadb.com/kb/en/mariabackup/)**
 - **Publish your archive publicly** — a CSV/Parquet dump on GitHub or Zenodo *is* a backup, and it's a contribution to open data. See [Zenodo](https://zenodo.org/) for a citable DOI.
+- **Let someone else archive it too.** Vendor clouds and hosted services keep their own copy — [Pro Weather](website-templates.md#pro-weather) archives every Davis/WeatherLink reading permanently, which is a real answer to [WeatherLink's limited retention window](website-templates.md#the-weatherlink-retention-problem). Treat it as a *second* copy, not your only one: an archive you can't export is a hostage, so check the export path before you rely on it.
 - **Move the OS off the SD card.** Boot a Pi from USB SSD, or put `/var` on one. SD cards die from write cycles; a weather logger writes constantly.
 
 ---

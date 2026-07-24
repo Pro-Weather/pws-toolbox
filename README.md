@@ -18,9 +18,9 @@ Curated, categorised, and kept link-checked.
 
 ## 🧭 Start here
 
-**Never built one before?** Read [Ready-made stacks](docs/stacks.md) — five complete, proven
-hardware-to-website recipes (from "€60 and a Raspberry Pi" to "full pro setup"), so you can copy
-one instead of choosing 40 things individually.
+**Never built one before?** Read [Ready-made stacks](docs/stacks.md) — six complete, proven
+hardware-to-website recipes (from "€60 and a Raspberry Pi" to "full pro setup" to "pay someone else
+to run it"), so you can copy one instead of choosing 40 things individually.
 
 **Know what you want?** Jump straight to a category:
 
@@ -97,6 +97,9 @@ If you read nothing else, these are the tools that come up in almost every build
 | **[Saratoga Templates](https://saratoga-weather.org/wxtemplates/)** | Cumulus/WeeWX/WD | The old-school powerhouse. Enormous script library, every page you could want. |
 | **[Weather34](https://weather34.com/homeweatherstation/)** | Cumulus/WeeWX | Beautiful dark dashboard aesthetic that half the hobby has copied. |
 | **[CU-HWS](https://github.com/ktrue/CU-HWS)** | Cumulus/WeeWX/WeatherCat | Ken True's Home Weather Station template — modern, maintained, well-documented. |
+| **[Pro Weather](https://pro-weather.com/)** ᴹ | Davis/WeatherLink (+ upload URL) | Hosted, not self-run: paste a WeatherLink v2 key, get a site on your domain. Paid, ~€6/mo. |
+
+<sub>ᴹ = built by the maintainers of this list. See [the full entry](docs/website-templates.md#pro-weather) for trade-offs.</sub>
 
 → Deep dive with 30+ more: **[docs/website-templates.md](docs/website-templates.md)**
 
@@ -139,12 +142,16 @@ If you read nothing else, these are the tools that come up in almost every build
 | **~€300–450** | Tempest (no moving parts) or Ambient WS-5000. | [Hardware](docs/hardware.md) |
 | **€700+** | Davis Vantage Pro2 + WeatherLink Live. Research-grade, 20-year lifespan. | [Stack 4](docs/stacks.md#stack-4-the-davis-classic) |
 | **€2000+** | Fan-aspirated Davis / Vaisala. You are no longer a hobbyist. | [Hardware](docs/hardware.md#professional--research-grade) |
+| **+ ~€6/mo** | Skip the server entirely — hosted site on your own domain. | [Stack 6](docs/stacks.md#stack-6-hosted-no-server) |
+
+> The recurring cost of the self-hosted routes isn't €0 either — it's the evening you spend when the
+> SD card dies. Price both honestly.
 
 ---
 
 ## 📚 All categories
 
-- **[docs/stacks.md](docs/stacks.md)** — Five copy-me end-to-end builds
+- **[docs/stacks.md](docs/stacks.md)** — Six copy-me end-to-end builds
 - **[docs/hardware.md](docs/hardware.md)** — Stations, gateways, individual sensors, siting guidance
 - **[docs/station-software.md](docs/station-software.md)** — Collection, logging & upload software
 - **[docs/website-templates.md](docs/website-templates.md)** — Skins, templates, dashboards
@@ -169,6 +176,15 @@ Found a tool that isn't here? A dead link? A template that got abandoned?
 Rules of thumb: it must be **usable today**, **relevant to building or running a personal
 weather station website**, and get **one line saying what makes it different**.
 See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## 🪧 Disclosure
+
+This list is maintained by [Pro-Weather](https://github.com/Pro-Weather), who also build
+[Pro Weather](https://pro-weather.com/) — a paid hosted service for Davis/WeatherLink stations.
+It's listed here, marked **ᴹ**, and held to the same bar as everything else: what it does, what it
+costs, and when *not* to use it. Free and self-hosted alternatives come first throughout, because
+for most people they're the right answer. If you ever think an entry reads like an advert rather
+than an assessment, [say so in an issue](../../issues/new?template=add-tool.yml) — that's a bug.
 
 ## 📄 License
 

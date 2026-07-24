@@ -161,6 +161,7 @@ Your software builds this for you. The `wxnow.txt` format is the same data for A
 - **CumulusMX** → Settings → Internet Settings → per-network tabs. The most complete built-in uploader set of any software.
 - **Meteobridge** → one config page, ~30 services, tick the boxes
 - **Ecowitt gateway** → Weather Services page: WU + Ecowitt + two custom servers, directly from the hardware, **no computer required**
+- **Hosted services** → some publish onward for you: [Pro Weather](website-templates.md#pro-weather) forwards to Wunderground, WOW, CWOP and Windy from your WeatherLink data, so there's nothing running at home to keep uploading
 
 ---
 

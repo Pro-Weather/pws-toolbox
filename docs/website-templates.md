@@ -1,11 +1,12 @@
 # 🎨 Website templates & skins
 
-The actual website. Three broad approaches:
+The actual website. Four broad approaches:
 
 1. **Skins** — your station software renders the site for you (WeeWX skins). Easiest, most robust.
 2. **Templates** — a PHP/JS site that reads a live data file (`realtime.txt`, `clientraw.txt`, JSON)
    your software writes. Software-agnostic, more features, more setup.
-3. **Roll your own** — see [docs/diy.md](diy.md) and [docs/charts-widgets.md](charts-widgets.md).
+3. **Hosted services** — you paste an API key, they run the site. No server, no maintenance, a monthly fee.
+4. **Roll your own** — see [docs/diy.md](diy.md) and [docs/charts-widgets.md](charts-widgets.md).
 
 [← Back to index](../README.md)
 
@@ -14,6 +15,7 @@ The actual website. Three broad approaches:
 ## Contents
 
 - [Comparison table](#comparison-table)
+- [Hosted services (no server)](#hosted-services-no-server)
 - [WeeWX skins](#weewx-skins)
 - [Software-agnostic templates](#software-agnostic-templates)
 - [CumulusMX templates & add-ons](#cumulusmx-templates--add-ons)
@@ -38,6 +40,59 @@ The actual website. Three broad approaches:
 | [CU-HWS](#cu-hws) | Cumulus/WeeWX/WeatherCat | PHP | ✅ AJAX | ✅ | ✅ |
 | [CumulusUtils](#cumulusutils) | CumulusMX | C# generator | ✅ | ✅ | ✅ |
 | [Grafana](charts-widgets.md#grafana) | Anything → TSDB | Go/React | ✅ | ✅ | ✅ |
+| [Pro Weather](#pro-weather) | Davis/WeatherLink first, others via upload URL | hosted SaaS | ➖ 10-min refresh | ✅ | ✅ paid |
+
+---
+
+## Hosted services (no server)
+
+You never touch a server, a skin file or a cron job — you connect an account and configure the site
+in a browser. The trade-off is a subscription and less control over the markup.
+
+### Pro Weather
+**[pro-weather.com](https://pro-weather.com/)** · free 14-day trial, then €5.99/mo or €59/yr per site
+
+> ℹ️ **Maintainer's own product.** Pro Weather is built by [Pro-Weather](https://github.com/Pro-Weather),
+> who also maintain this list. Listed because it's a genuine option in this category — judge it on
+> the same criteria as everything else here.
+
+Turns a **Davis WeatherLink** account into a hosted weather website on your own domain. You paste
+your WeatherLink **v2 API key and secret**; it auto-discovers your stations and sensors and deploys
+a site — no server, no PHP, no Raspberry Pi in the attic.
+
+- **Eleven tabs** of live conditions, charts, history, records and forecast — each optional and reorderable
+- **7-day daily + hourly forecast** for the station's exact location
+- **Permanent history archive** — charts from 24 h up to a full year, plus a 30-day wind rose. This is
+  the main technical reason to use it: it solves [WeatherLink's short retention window](#the-weatherlink-retention-problem) without you running a database.
+- **Records & almanac** — all-time highs/lows, monthly climate summaries, yearly extremes, and a banner when today breaks a record
+- **Branding** — logo, banner photo, fonts, colours, dark mode, about section, social links; branding removal on paid plans
+- **Custom domain with automatic SSL**, or a free subdomain
+- EN/NL/FR/DE, metric or imperial, Google Analytics, email alerts, monthly station reports, installs as a phone app
+- **AirLink** air-quality panels if you have one
+
+**Compatibility beyond Davis:** every site gets a personal upload URL, so
+[Ecowitt/Fine Offset](hardware.md#all-in-one-consumer-stations) gateways (including Froggit and
+Ambient) can post directly with no PC in between, and [WeeWX](station-software.md#weewx),
+[Meteobridge](station-software.md#meteobridge) or [CumulusMX](station-software.md#cumulusmx) can
+relay almost anything else. It can also forward your observations on to
+[Weather Underground, WOW, CWOP and Windy](networks.md).
+
+**Live example:** [weerstationardooie.be](https://weerstationardooie.be) — a real site running on it.
+[Docs](https://pro-weather.com/docs) · [Blog](https://pro-weather.com/blog)
+
+**Choose it if:** you own a Davis station, want a polished public site today, and would rather pay
+€6/month than maintain a Pi. **Skip it if:** you want to own the stack end to end, you're not on
+Davis/Ecowitt, or a recurring per-site fee is the wrong shape for you — [WeeWX + a free skin](#weewx-skins)
+costs nothing but your time.
+
+#### The WeatherLink retention problem
+
+Worth understanding whichever route you take: Davis's WeatherLink cloud keeps **detailed history for
+a limited window** depending on your subscription tier, so a site that only reads the live API can't
+build multi-year charts or all-time records. Every long-lived Davis setup solves this by archiving
+readings somewhere permanent — either **your own database** ([WeeWX/Cumulus + SQLite or MariaDB](data-storage.md)),
+or a hosted service that archives for you. Decide this before you have two years of history you
+can't get back.
 
 ---
 

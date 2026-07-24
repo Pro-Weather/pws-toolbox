@@ -49,6 +49,12 @@ It doesn't go in if it is:
 **Self-promotion is fine.** Say it's yours in the PR description. Your own skin, template, driver or
 station site is exactly the kind of thing this list exists to surface.
 
+**Commercial entries** are welcome and get **no special treatment**: same one-line justification,
+stated price, and an honest note on when *not* to use them. That includes the maintainers' own
+product — [Pro Weather](https://pro-weather.com/) is listed and marked **ᴹ**, and if any entry reads
+like an advert rather than an assessment, open an issue. A curated list that soft-pedals its own
+commercial interest isn't worth reading.
+
 ---
 
 ## Style

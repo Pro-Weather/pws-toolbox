@@ -54,7 +54,7 @@ The box that turns radio packets into something your server can read.
 | Device | Works with | Notes |
 |---|---|---|
 | **[Ecowitt GW2000 / GW1200 / GW1100](https://www.ecowitt.com/shop/goodsDetail/275)** | Ecowitt + Fine Offset family | The workhorse. Local HTTP/JSON API, MQTT (GW2000), custom-server upload to WU **and** Ecowitt protocol simultaneously. ~€40–70. |
-| **[Davis WeatherLink Live](https://www.davisinstruments.com/products/weatherlink-live)** | Davis | Local JSON at `http://<ip>:80/v1/current_conditions` + UDP broadcast. The right way to get Davis data into WeeWX. |
+| **[Davis WeatherLink Live](https://www.davisinstruments.com/products/weatherlink-live)** | Davis | Local JSON at `http://<ip>:80/v1/current_conditions` + UDP broadcast. The right way to get Davis data into WeeWX — and it's what feeds the [WeatherLink v2 cloud API](station-software.md#weatherlink-davis-cloud) that hosted services like [Pro Weather](website-templates.md#pro-weather) read. |
 | **[Davis USB/Serial Datalogger](https://www.davisinstruments.com/)** | Davis consoles | Cheaper, wired, classic WeeWX `vantage` driver path. |
 | **[Meteobridge / Meteobridge Nano / PRO](https://www.meteobridge.com/)** | Almost everything | Commercial firmware appliance: reads the station, uploads to ~30 networks, serves templates. Set-and-forget. |
 | **[WiFiLogger 2](https://www.wifilogger.net/)** | Davis | Polish-made Davis Wi-Fi logger — web UI, MQTT, many upload targets. Great value alternative to WeatherLink. |

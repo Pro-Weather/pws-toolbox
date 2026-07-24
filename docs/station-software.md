@@ -31,6 +31,7 @@ This is the single most important choice you make — it determines which
 | …have no console, just an SDR dongle | **[rtl_433](#rtl_433)** |
 | …already run Home Assistant for everything else | **[Home Assistant](#home-automation-platforms)** |
 | …have an obscure old station nothing else supports | **[Weather Display](#weather-display)** |
+| …want to run **no software at all** (Davis/WeatherLink) | **[Pro Weather](#pro-weather)** or a [vendor cloud](networks.md#vendor-clouds) |
 | …want to write it yourself in Python/Node/Go | [docs/diy.md](diy.md) |
 
 ---
@@ -121,6 +122,26 @@ Long-standing commercial Windows package. Largely superseded, but still in use.
 
 Davis's own cloud. Has a good [v2 REST API](https://weatherlink.github.io/v2-api/) — you can build a
 website that reads from WeatherLink without running any local software at all.
+
+⚠️ **Detailed history retention is limited by subscription tier.** If you want multi-year charts and
+all-time records, archive the readings somewhere permanent — your own [database](data-storage.md),
+or a service that does it for you.
+
+### Pro Weather
+**[pro-weather.com](https://pro-weather.com/)** · free 14-day trial, then €5.99/mo or €59/yr per site
+
+Not station software in the usual sense — it **replaces** it for Davis owners. It reads your
+[WeatherLink v2 API](https://weatherlink.github.io/v2-api/) key in the cloud, auto-discovers your
+sensors, archives every reading permanently, and publishes a hosted site on your own domain. No
+local process, no database, no cron.
+
+Non-Davis stations reach it through a personal upload URL — [Ecowitt](hardware.md#gateways-consoles--bridges)
+gateways post directly, and [WeeWX](#weewx), [Meteobridge](#meteobridge) or [CumulusMX](#cumulusmx)
+can relay anything else. It can forward observations on to
+[Wunderground, WOW, CWOP and Windy](networks.md) as well.
+
+> ℹ️ Built by [Pro-Weather](https://github.com/Pro-Weather), who maintain this list.
+> Full write-up and trade-offs: [website-templates.md](website-templates.md#pro-weather).
 
 ---
 

@@ -1,8 +1,7 @@
-# Secrets — the Discord webhook URL is a credential, never commit it
+# Secrets — API keys, webhook URLs and station credentials are never committed
 .env
 .env.*
 *.webhook
-discord/*.local.json
 
 # OS / editor
 .DS_Store

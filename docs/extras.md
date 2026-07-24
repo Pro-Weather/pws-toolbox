@@ -74,7 +74,8 @@ sensor battery low. That last one saves more data than any of the others.
 
 ## Discord & chat bots
 
-See also the **[Discord share kit](../discord/)** in this repo for posting the *repo* to Discord.
+Pushing your station's readings into a chat channel — the cheapest way to make your data something
+people see every day rather than something they'd have to remember to visit.
 
 | Tool | Notes |
 |---|---|

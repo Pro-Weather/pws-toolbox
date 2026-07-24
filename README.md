@@ -38,7 +38,7 @@ one instead of choosing 40 things individually.
 | ✨ | **[Extras](docs/extras.md)** | All-sky cameras, lightning, air quality, alerts, Discord/Telegram bots, astronomy |
 | 💬 | **[Community & learning](docs/community.md)** | Forums, Discords, subreddits, docs, books, standards |
 
-**Want people to actually see your site?** → [Discord share kit](discord/) · [Contributing](CONTRIBUTING.md)
+**Spotted something missing?** → [Contributing](CONTRIBUTING.md) · [Add a tool](../../issues/new?template=add-tool.yml)
 
 ---
 
@@ -176,5 +176,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 Linked projects keep their own licenses.
 
 <div align="center">
-<sub>Maintained by <a href="https://github.com/Pro-Weather">Pro-Weather</a> · Share it: <a href="discord/">Discord kit</a></sub>
+<sub>Maintained by <a href="https://github.com/Pro-Weather">Pro-Weather</a></sub>
 </div>

@@ -83,11 +83,33 @@ docs/hosting.md            Static hosts, tunnels, servers, monitoring
 docs/diy.md                Microcontrollers, firmware, maths, building the site
 docs/extras.md             Cameras, alerts, bots, astronomy, records
 docs/community.md          Forums, chat, docs, standards, books
-discord/                   Share kit + webhook tooling
 assets/                    Social preview image (source SVG + rendered PNG)
 ```
 
 If your addition doesn't fit any of these, propose a new section in your PR.
+
+---
+
+## Maintainer note: the social preview
+
+[`assets/social-preview.png`](assets/social-preview.png) is what shows as the banner when the repo
+link is pasted anywhere that unfurls URLs. **GitHub has no API for it** — it has to be uploaded by
+hand at *Settings → Social preview → Edit*, and re-uploaded after any change.
+
+To regenerate it from [`assets/social-preview.svg`](assets/social-preview.svg):
+
+```bash
+# any Chromium build
+chromium --headless --disable-gpu --force-device-scale-factor=1 \
+  --window-size=1280,640 --screenshot=assets/social-preview.png \
+  "file://$PWD/assets/social-preview.svg"
+
+# or, on Linux, simpler:
+rsvg-convert -w 1280 -h 640 assets/social-preview.svg -o assets/social-preview.png
+```
+
+Keep it 1280 × 640 (2:1) and under ~1 MB; leave important text out of the outer 5 %, since some
+clients crop slightly.
 
 ---
 

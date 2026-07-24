@@ -20,7 +20,7 @@ Discord builds its preview from the repo's OpenGraph tags. GitHub generates thos
 
 ### Upload the social preview (60 seconds, manual, required)
 
-1. Go to **`https://github.com/Pro-Weather/awesome-personal-weather-station/settings`**
+1. Go to **`https://github.com/Pro-Weather/pws-toolbox/settings`**
 2. Scroll to **Social preview** → **Edit** → **Upload an image**
 3. Choose **[`assets/social-preview.png`](../assets/social-preview.png)** (1280 × 640, 412 KB)
 4. Paste the repo link into any Discord channel to check it
@@ -49,12 +49,12 @@ served over HTTPS. Keep important text out of the outer 5 % — mobile clients c
 ### One-liner
 ```
 🌦️ Every tool for building a personal weather station website — hardware, software, skins, APIs, hosting.
-https://github.com/Pro-Weather/awesome-personal-weather-station
+https://github.com/Pro-Weather/pws-toolbox
 ```
 
 ### Short pitch (general channels)
 ```
-Put together an aggregation repo: **Awesome Personal Weather Station** 🌦️
+Put together an aggregation repo: **PWS Toolbox** 🌦️
 
 Everything you need to get a weather station in your garden onto the internet —
 stations & sensors, collection software (WeeWX / CumulusMX / rtl_433), website
@@ -63,14 +63,14 @@ skins & templates, charting libs, free weather APIs, the networks to upload to
 
 Plus 5 copy-me end-to-end stacks, from €0 to full DIY.
 
-<https://github.com/Pro-Weather/awesome-personal-weather-station>
+<https://github.com/Pro-Weather/pws-toolbox>
 ```
 > Wrapping a URL in `<angle brackets>` suppresses the embed — use that when you post several links
 > at once, and leave the *one* link you want previewed bare.
 
 ### For a weather / meteorology server
 ```
-🌦️ **Awesome Personal Weather Station** — a curated index of every tool for running a PWS website.
+🌦️ **PWS Toolbox** — a curated index of every tool for running a PWS website.
 
 📡 Hardware — Ecowitt · Davis · Tempest · Ambient · DIY
 🧰 Software — WeeWX · CumulusMX · Weather Display · Meteobridge · rtl_433
@@ -79,17 +79,17 @@ Plus 5 copy-me end-to-end stacks, from €0 to full DIY.
 🌍 Networks — Wunderground · CWOP · Windy · PWSWeather · WOW
 ☁️ Hosting — Cloudflare Tunnel · GitHub Pages · Docker
 
-CC0, PRs welcome: https://github.com/Pro-Weather/awesome-personal-weather-station
+CC0, PRs welcome: https://github.com/Pro-Weather/pws-toolbox
 ```
 
 ### For a homelab / selfhosted server
 ```
-If anyone here has a weather station gathering dust: **Awesome Personal Weather Station** 🌦️
+If anyone here has a weather station gathering dust: **PWS Toolbox** 🌦️
 
 Full self-hosted path — WeeWX/CumulusMX in Docker → SQLite/InfluxDB → a skin or Grafana →
 nginx behind a Cloudflare Tunnel. Ready-made docker-compose included, no port forwarding.
 
-https://github.com/Pro-Weather/awesome-personal-weather-station
+https://github.com/Pro-Weather/pws-toolbox
 ```
 
 ---

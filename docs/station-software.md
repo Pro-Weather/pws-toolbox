@@ -29,7 +29,7 @@ This is the single most important choice you make — it determines which
 | …want a GUI, a built-in web server, and zero Python | **[CumulusMX](#cumulusmx)** |
 | …want an appliance you configure once and forget | **[Meteobridge](#meteobridge)** |
 | …have no console, just an SDR dongle | **[rtl_433](#rtl_433)** |
-| …already run Home Assistant for everything else | **[Home Assistant](#home-assistant)** |
+| …already run Home Assistant for everything else | **[Home Assistant](#home-automation-platforms)** |
 | …have an obscure old station nothing else supports | **[Weather Display](#weather-display)** |
 | …want to write it yourself in Python/Node/Go | [docs/diy.md](diy.md) |
 

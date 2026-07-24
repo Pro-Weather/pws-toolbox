@@ -32,11 +32,13 @@
   <rect x="80" y="150" width="88" height="7" rx="3.5" fill="url(#accent)"/>
 
   <!-- title -->
-  <text x="80" y="248" fill="#f8fafc" font-size="76" font-weight="700" letter-spacing="-1.5">Awesome Personal</text>
-  <text x="80" y="330" fill="#f8fafc" font-size="76" font-weight="700" letter-spacing="-1.5">Weather Station</text>
+  <text x="80" y="252" fill="#f8fafc" font-size="88" font-weight="700" letter-spacing="-2">PWS Toolbox</text>
 
-  <text x="80" y="392" fill="#93c5fd" font-size="27" font-weight="500">
-    Every tool for turning a station in your garden into a website.
+  <text x="80" y="316" fill="#e2e8f0" font-size="30" font-weight="600">
+    Build a personal weather station website.
+  </text>
+  <text x="80" y="366" fill="#93c5fd" font-size="25" font-weight="500">
+    Hardware → software → template → charts → hosting → networks.
   </text>
 
   <!-- chips -->

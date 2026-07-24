@@ -1,16 +1,16 @@
 <div align="center">
 
-# 🌦️ Awesome Personal Weather Station Websites
+# 🌦️ PWS Toolbox
 
 **Every tool you need to turn a weather station in your garden into a website on the internet.**
 
 Hardware → collection software → database → skin/template → charts → hosting → the networks you upload to.
 Curated, categorised, and kept link-checked.
 
-[![Awesome](https://img.shields.io/badge/awesome-list-ff69b4?style=flat-square)](https://github.com/Pro-Weather/awesome-personal-weather-station)
+[![Awesome](https://img.shields.io/badge/awesome-list-ff69b4?style=flat-square)](https://github.com/Pro-Weather/pws-toolbox)
 [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-blue?style=flat-square)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](CONTRIBUTING.md)
-[![Link Check](https://img.shields.io/github/actions/workflow/status/Pro-Weather/awesome-personal-weather-station/links.yml?style=flat-square&label=links)](../../actions/workflows/links.yml)
+[![Link Check](https://img.shields.io/github/actions/workflow/status/Pro-Weather/pws-toolbox/links.yml?style=flat-square&label=links)](../../actions/workflows/links.yml)
 
 </div>
 
